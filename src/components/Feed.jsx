@@ -1,5 +1,7 @@
 import { Box, Stack, Typography } from '@mui/material';
 import { Sidebar, Videos } from './';
+import { fetchFromAPI } from '../util/fetchFromAPI';
+
 const Feed = () => {
   return (
     <Stack sx={{ flexDirection: { xs: 'column', md: 'row'} }}>
