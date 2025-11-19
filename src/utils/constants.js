@@ -39,4 +39,4 @@ export const demoChannelUrl = '/channel/UCmXmlB4-HJytD7wek0Uo97A';
 export const demoVideoUrl = '/video/GDa8kZLNhJ4';
 export const demoChannelTitle = 'JavaScript Mastery';
 export const demoVideoTitle = 'Build and Deploy 5 JavaScript & React API Projects in 10 Hours - Full Course | RapidAPI';
-export const demoProfilePicture = 'http://dergipark.org.tr/assets/app/images/buddy_sample.png'
+export const demoProfilePicture = 'https://yt3.ggpht.com/ek0JxMA0h1uXpnYKFL_dYo1ny3LWzAuLwGvaqQwb9Qh2oEQJIPNEPjDrY9yKsvMmIrq_Ooq_=s88-c-k-c0x00ffffff-no-rj'
