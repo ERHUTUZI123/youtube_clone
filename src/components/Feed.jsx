@@ -12,7 +12,8 @@ const Feed = () => {
   useEffect(() => {
       fetchFromAPI("search", {
         part: "snippet",
-        q: "New",
+        q: "Soccer",
+        regionCode: "CA",
         maxResults: 50,
       })
         .then((data) => setVideos(data.items));    
