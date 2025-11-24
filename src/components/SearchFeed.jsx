@@ -25,7 +25,6 @@ const SearchFeed = () => {
           {searchTerm}
         </span> videos
       </Typography>
-
       <Videos videos={videos} />
     </Box>
   );
