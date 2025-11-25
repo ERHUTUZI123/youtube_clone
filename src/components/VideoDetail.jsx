@@ -13,15 +13,13 @@ const VideoDetail = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    // 1. Video detail
     fetchFromAPI("videos", {
-      part: ["snippet", "statistics"],
+      part: "snippet,statistics",
       id,
     }).then((data) => setVideoDetail(data.items?.[0]));
   
-    // 2. Related videos (CORRECTED)
     fetchFromAPI("search", {
-      part: ["id", "snippet"],
+      part: "id,snippet",
       relatedToVideoId: id,
       type: "video",
       videoEmbeddable: "true",
