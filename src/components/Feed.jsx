@@ -12,9 +12,9 @@ const Feed = () => {
   useEffect(() => {
       fetchFromAPI("search", {
         part: "snippet",
-        q: "Soccer",
+        q: selectedCategory,
         regionCode: "CA",
-        maxResults: 50,
+        maxResults: 25,
       })
         .then((data) => setVideos(data.items));    
   }, [selectedCategory]);

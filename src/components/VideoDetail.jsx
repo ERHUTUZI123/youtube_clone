@@ -9,24 +9,13 @@ import { fetchFromAPI } from "../utils/fetchFromAPI";
 
 const VideoDetail = () => {
   const [videoDetail, setVideoDetail] = useState(null);
-  const [videos, setVideos] = useState([]);
   const { id } = useParams();
 
   useEffect(() => {
     fetchFromAPI("videos", {
       part: "snippet,statistics",
       id,
-    }).then((data) => setVideoDetail(data.items?.[0]));
-  
-    fetchFromAPI("search", {
-      part: "id,snippet",
-      relatedToVideoId: id,
-      type: "video",
-      videoEmbeddable: "true",
-      maxResults: 25,
-    })
-      .then((data) => setVideos(data.items || []));
-  }, [id]);
+    }).then((data) => setVideoDetail(data.items?.[0]));  }, [id]);
   
 
   if(!videoDetail?.snippet) return <Loader />;
@@ -59,9 +48,6 @@ const VideoDetail = () => {
               </Stack>
             </Stack>
           </Box>
-        </Box>
-        <Box px={2} py={{ md: 1, xs: 5 }} justifyContent="center" alignItems="center" >
-          <Videos videos={videos} direction="column" />
         </Box>
       </Stack>
     </Box>
